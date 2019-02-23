@@ -4,47 +4,49 @@ import {createStackNavigator,createAppContainer} from 'react-navigation'
 import TabNavigator from './Components/MainScreen'
 import {Icon} from 'native-base';
 import {Ionicons,SimpleLineIcons} from "@expo/vector-icons";
+import MainScreen from './Components/MainScreen';
 
 
 class App extends React.Component {
   render() {
     return (
-  <AppContainer></AppContainer>  
+  // <AppContainer></AppContainer>  
+  <MainScreen></MainScreen>
   );
   }
 }
-const AppNavigator = createStackNavigator(
-  {
-    Mainscreen: TabNavigator
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => {
-      return {
-        headerLeft: 
-          <Icon
-            style={{ paddingLeft: 20 }}
-            // onPress={() => navigation.openDrawer()}
-            name='ios-camera'
-            size={30}
-          />
-        ,
-        headerRight: 
-          <Icon
-            style={{ paddingRight: 20 }}
-            // onPress={() => navigation.openDrawer()}
-            name='ios-send'
-            size={30}
-          />
-        ,
-        title : "Instagram"
+// const AppNavigator = createStackNavigator(
+//   {
+//     Mainscreen: TabNavigator
+//   },
+//   // {
+//   //   defaultNavigationOptions: ({ navigation }) => {
+//   //     return {
+//   //       headerLeft: 
+//   //         <Icon
+//   //           style={{ paddingLeft: 20 }}
+//   //           // onPress={() => navigation.openDrawer()}
+//   //           name='ios-camera'
+//   //           size={30}
+//   //         />
+//   //       ,
+//   //       headerRight: 
+//   //         <Icon
+//   //           style={{ paddingRight: 20 }}
+//   //           // onPress={() => navigation.openDrawer()}
+//   //           name='ios-send'
+//   //           size={30}
+//   //         />
+//   //       ,
+//   //       title : "Instagram"
 
 
-      };
-    }
-  }
-);
+//   //     };
+//   //   }
+//   // }
+// );
 export default App;
-const AppContainer = createAppContainer(AppNavigator);
+// const AppContainer = createAppContainer(AppNavigator);
 
 // NavigationOptions : {
   //   headerLeft : <Icon name='ios-camera' style={{paddingLeft: 20 }}/>,
